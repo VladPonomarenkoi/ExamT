@@ -19,8 +19,10 @@ console.log('Арифметична прогресія з n=4 (1+3+5+7)', getTas
 console.log('Арифметична прогресія з n=6 (1+3+5+7+9+11)', getTaskArithmeticProgression(6));
 console.log('Арифметична прогресія з n=8 (1+3+5+7+9+11+13+15)', getTaskArithmeticProgression(8));
 
-const consoleN = readline.question('Введіть N для арифметичної прогресії: ')
-console.log(`Арифметична прогресія з n=${consoleN} ${getTaskArithmeticProgression(Number(consoleN))}`);
+if(process.env.NODE_ENV !== 'test') {
+    const consoleN = readline.question('Введіть N для арифметичної прогресії: ')
+    console.log(`Арифметична прогресія з n=${consoleN} ${getTaskArithmeticProgression(Number(consoleN))}`);
+}
 
 
 module.exports = getTaskArithmeticProgression
